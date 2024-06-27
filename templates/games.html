@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Games</title>
+</head>
+<body>
+    <h1>Ігри</h1>
+    <br>
+    {% for game in games %}
+    <h5>
+        {{game.title}} - {{game.price}} ---- <a href = "{% url 'game_details' game.id %}">Детальніше</a>
+    </h5>
+    <br>
+    {% endfor %}
+</body>
+</html>
